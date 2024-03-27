@@ -1,9 +1,11 @@
 name: CLI Pipeline
 on:
   pull_request:
+    - '**.md'   
 
 jobs:
   test-cli-with-database:
+    if: ${{ !contains(github.event.pull_request.title, '[comment/skip]') && !contains(github.event.pull_request.title, '[style/skip]') && !contains(github.event.pull_request.title, '[functional/skip]')}}
     env:
       NODE_ENV: CI
       REDIS_URL: redis://localhost:6379
