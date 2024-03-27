@@ -5,6 +5,8 @@ import { Label, TextArea, useAnalytics, useModal, ModalFooter } from "docs-ui"
 
 
 
+
+
 const DetailedFeedback = () => {
   const [improvementFeedback, setImprovementFeedback] = useState("")
   const [positiveFeedback, setPositiveFeedback] = useState("")
@@ -12,6 +14,9 @@ const DetailedFeedback = () => {
   const { loaded, track } = useAnalytics()
   const { closeModal } = useModal()
   // comment
+
+
+
 
   
   return (
@@ -53,7 +58,7 @@ const DetailedFeedback = () => {
                   !positiveFeedback &&
                   !additionalFeedback)
               ) {
-                return
+              return
               }
               const buttonElm = e.target as HTMLButtonElement
               buttonElm.classList.add("cursor-not-allowed")
