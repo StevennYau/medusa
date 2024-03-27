@@ -4,6 +4,7 @@ import type { OpenAPIV3 } from "openapi-types"
 import Section from "../Section"
 import MDXContentServer from "../MDXContent/Server"
 
+// comment
 export type DescriptionProps = {
   specs: OpenAPIV3.Document
 }
