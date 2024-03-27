@@ -1,12 +1,9 @@
 name: OAS Comments Format Validation
 on:
   pull_request:
-    paths-ignore:
-        - '**.md' 
 
 jobs:
   docs-test:
-    if: ${{ !contains(github.event.pull_request.title, '[style/skip]')}}
     runs-on: ubuntu-latest
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
