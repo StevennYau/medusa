@@ -3,6 +3,8 @@
 import { useState } from "react"
 import { Label, TextArea, useAnalytics, useModal, ModalFooter } from "docs-ui"
 
+
+
 const DetailedFeedback = () => {
   const [improvementFeedback, setImprovementFeedback] = useState("")
   const [positiveFeedback, setPositiveFeedback] = useState("")
@@ -11,11 +13,12 @@ const DetailedFeedback = () => {
   const { closeModal } = useModal()
   // comment
 
+  
   return (
     <>
       <div className="flex flex-col gap-1 overflow-auto py-1.5 px-2 lg:min-h-[400px]">
         <div className="flex flex-col gap-1 ">
-          <Label>What should be improved in this API reference?</Label>
+          <Label>What should be improved in this API reference? </Label>
           <TextArea
             rows={3}
             value={improvementFeedback}
@@ -75,7 +78,7 @@ const DetailedFeedback = () => {
             variant: "primary",
           },
         ]}
-        className="mt-1"
+      className="mt-1"
       />
     </>
   )
