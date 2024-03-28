@@ -9,7 +9,7 @@ const DetailedFeedback = () => {
   const [additionalFeedback, setAdditionalFeedback] = useState("")
   const { loaded, track } = useAnalytics()
   const { closeModal } = useModal()
-  // comment
+  // comments
 
   return (
     <>
