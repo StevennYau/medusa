@@ -1,7 +1,8 @@
 name: CLI Pipeline
 on:
   pull_request:
-    - '**.md'   
+    paths-ignore:
+        - '**.md'
 
 jobs:
   test-cli-with-database:
