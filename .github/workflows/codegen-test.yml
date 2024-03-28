@@ -4,11 +4,9 @@ on:
     paths-ignore:
       - "docs/**"
       - "www/**"
-      - '**.md'
 
 jobs:
   codegen-test:
-    if: ${{ !contains(github.event.pull_request.title, '[comment/skip]') && !contains(github.event.pull_request.title, '[style/skip]') && !contains(github.event.pull_request.title, '[functional/skip]')}}
     runs-on: ubuntu-latest
     env:
       TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
