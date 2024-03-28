@@ -1,8 +1,6 @@
 name: OAS Comments Format Validation
 on:
-  pull_request:
-    paths-ignore:
-        - '**.md' 
+  pull_request: 
 
 jobs:
   docs-test:
